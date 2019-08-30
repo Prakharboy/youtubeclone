@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class DatafetchService {
 
-  private url:string= "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDR9NyQQ18mPM0TQ7gkTqVS2qjNjjjwHq4&channelId=UCq-Fj5jknLsUf-MWSy4_brA&part=snippet&order=date&maxResults=20";
+  private url:string= "https://www.googleapis.com/youtube/v3/search?key=&channelId=UCq-Fj5jknLsUf-MWSy4_brA&part=snippet&order=date&maxResults=20";
   constructor(private ht:HttpClient) { }
 
   getad():Observable<any>
@@ -18,7 +18,7 @@ export class DatafetchService {
   
   searchevents(inputtt):Observable<any>
   {
-      return this.ht.get<any>("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+inputtt+"&key=AIzaSyDR9NyQQ18mPM0TQ7gkTqVS2qjNjjjwHq4");
+      return this.ht.get<any>("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+inputtt+"&key=");
 
   }
  
